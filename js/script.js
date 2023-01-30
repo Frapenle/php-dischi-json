@@ -3,14 +3,13 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            apiUrl: './server.php',
+            apiUrl: './server/server.php',
             diskList: [],
             singleDisk: [],
             showDetailDisk: false
-
-
         }
     },
+
     methods: {
         getDisk() {
             axios.get(this.apiUrl).then((response) => {
